@@ -141,3 +141,6 @@ st.markdown("<h3> Distribuição de Faturamento no estado <h3>", unsafe_allow_ht
 st.write("")
 components.iframe("https://datawrapper.dwcdn.net/0S2QF/1/", width=700, height=700)
 
+cidade = pd.read_excel('database/cidades.xlsx').sort_values(by="Valor Total", ascending=False)
+
+st.dataframe(cidade[['Cidade', 'Valor Total']])
