@@ -143,4 +143,4 @@ components.iframe("https://datawrapper.dwcdn.net/0S2QF/1/", width=700, height=70
 
 cidade = pd.read_excel('database/cidades.xlsx').sort_values(by="Valor Total", ascending=False)
 
-st.dataframe(cidade[['Cidade', 'Valor Total']])
+st.dataframe(cidade[['Cidade', 'Valor Total']], use_container_width=True)
